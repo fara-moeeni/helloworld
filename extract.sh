@@ -16,7 +16,7 @@ for dir in `ls -1 | grep -viE ".sh" | xargs`
             ls -1 *.rar | xargs rm -fv
            cd ..
           else
-            echo "splited rar files are found in $dir"
+            echo "splitted rar files are found in $dir"
             ls -1 *.part1* | xargs unrar x
             find . -iname "*.part*.rar" -exec rm -rfv {} \;
            cd ..
