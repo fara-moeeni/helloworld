@@ -5,7 +5,7 @@ for dir in `ls -1 | grep -viE ".sh" | xargs`
     cd $dir
     count=`ls | grep -iE ".rar" -c`
     if [ "$count" == 0 ]; then
-      echo "there are no rar files in `basename $dir`. Trying next folder..."
+      echo ">>> There are no rar files in `basename $dir`. Trying next folder... <<<"
       cd ..
       continue
     else
