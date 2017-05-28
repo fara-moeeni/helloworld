@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export IFS=$'\n'
 for dir in `ls -1 | grep -viE ".sh" | xargs -d '\n'`
   do
     cd $dir
