@@ -1,6 +1,6 @@
 #!/bin/bash
-export IFS=$'\n'
-for dir in `ls -1 | grep -viE ".sh" | xargs -d '\n'`
+#export IFS=$'\n'
+for dir in `ls -1 | grep -viE "extract.sh" | xargs -d '\n'`
   do
     cd $dir
     count=`ls | grep -iE ".rar" -c`
@@ -9,7 +9,7 @@ for dir in `ls -1 | grep -viE ".sh" | xargs -d '\n'`
       cd ..
       continue
     else
-       type1=`ls | grep -iE "part1.rar" -c`
+       type1=`ls | grep -iE "part.?1.rar" -c`
 	  if [ "$type1" == 0 ]; then
             echo ">>> Single .rar file found in $dir <<<"
             ls -1 | xargs unrar x
